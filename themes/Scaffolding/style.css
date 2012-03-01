@@ -1,0 +1,64 @@
+/*
+Theme Name: Scaffolding
+Theme URI: http://withjandj.com/
+Description: A parent theme for J&J
+Author: J&J
+Version: 0.1
+*/
+
+
+
+/*---------------------------------- Menus */
+
+#main_menu ul li a {
+	float: left;
+	width: 74px;
+	border-left: 1px solid black;
+	padding-left: 5px;
+	color: black;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.7em;
+	padding-top: 10px;
+}
+
+#main_menu .current_page_item a {
+	background-color: #e0e0e0;
+}
+
+#main_menu li a:hover {
+	background-color: #f0f0f0;
+}
+
+ul#menu-footer-menu li a{
+	float: left;
+	text-transform: uppercase;
+	font-size: 0.7em;
+	padding: 0px 10px 0px 0px;
+}
+
+/*---------------------------------- Links */
+
+a:link {
+	color: #dc1212;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #ab0000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ff5151;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #ff5151;	
+	text-decoration: none;
+}
+
+
+
+

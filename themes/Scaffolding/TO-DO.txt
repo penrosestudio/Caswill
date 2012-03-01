@@ -1,0 +1,4 @@
+This covers general things outside of embedded TO-DO's
+
+* add comments.php
+* set up a child theme to use this theme
