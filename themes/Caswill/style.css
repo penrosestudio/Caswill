@@ -7,59 +7,140 @@ Author: J&J
 Version: 0.1
 */
 
+body {
+	background-color: #f5f5f5;
+	background-image: url(images/paper-texture.jpg);
+	color: #303030;
+	font-family: "adobe-caslon-pro",serif;
+	font-style: normal;
+	font-weight: 400;
+}
 
-
-/*---------------------------------- Menus */
-
-#main_menu ul li a {
-	float: left;
-	width: 74px;
-	border-left: 1px solid black;
-	padding-left: 5px;
-	color: black;
+a {
+	color: #d14444;
 	text-decoration: none;
+	-webkit-transition:all 0.2s ease-in;  
+   -moz-transition:all 0.2s ease-in;  
+   -o-transition:all 0.2s ease-in;  
+   transition:all 0.2s ease-in;
+}
+
+#wrapper {
+	margin-top: 120px;
+}
+
+h1 {
 	text-transform: uppercase;
-	font-size: 0.7em;
-	padding-top: 10px;
+	font-size: 24px;
+	letter-spacing: 0.08em;
 }
 
-#main_menu .current_page_item a {
-	background-color: #e0e0e0;
+h1 small {
+	font-style: italic;
+	font-size: 18px;
+	text-transform: capitalize;
+	display: block;
+	margin-top: -10px;
 }
 
-#main_menu li a:hover {
-	background-color: #f0f0f0;
+#sidebar ul, ul#filmIndex {
+	margin-left: 0px;
+	letter-spacing: 0.03em;
 }
 
-ul#menu-footer-menu li a{
-	float: left;
-	text-transform: uppercase;
-	font-size: 0.7em;
-	padding: 0px 10px 0px 0px;
+#sidebar a {
+	color: #303030;
 }
 
-/*---------------------------------- Links */
-
-a:link {
-	color: #dc1212;
-	text-decoration: none;
+#sidebar a:hover {
+	color: #d14444;
 }
 
-a:visited {
-	color: #ab0000;
-	text-decoration: none;
+#sidebar ul li, ul#filmIndex li {
+	list-style: none;
 }
 
-a:hover {
-	color: #ff5151;
-	text-decoration: underline;
+ul#films {
+	
 }
 
-a:active {
-	color: #ff5151;	
-	text-decoration: none;
+ul#information {
+	font-style: italic;
 }
 
+.article {
+	position: relative;
+}
 
+.article p {
+	width: 66%;
+}
 
+.article h2 {
+	display: inline-block;
+}
 
+.article .date {
+	color: #606060;	
+	font-style: italic;
+	padding-left: 40px;
+	letter-spacing: 0.03em;
+}
+
+#videoPlayer {
+	background-color: #303030;
+	height: 400px;
+	margin-right: 10px;
+}
+
+#playerControl a, ul#filmIndex li a {
+	color: #303030;
+	width: 174px;
+	display: inline-block;
+	font-style: italic;
+	font-size: 22px;
+	margin: 10px 10px 20px 0px;
+	padding: 10px;
+}
+
+#playerControl a:hover {
+	background-color: #cecece;
+}
+
+#playerControl a span, ul#filmIndex li a span {
+	font-size: 13px;
+	line-height: 18px;
+	font-style: normal;
+	display: block;
+	margin-top: 8px;
+	padding-right: 10px;
+}
+
+ul#filmIndex li a img {
+	width: 194px;
+	height: 120px;
+	background: #303030;
+	display: block;
+	margin-bottom: 10px;
+}
+
+ul#filmIndex li {
+	display: inline-block;
+}
+
+ul#filmIndex li a {
+	padding: 0px;
+	width: 193px;
+}
+
+.article img {
+	padding: 7px;
+	background-color: white;
+	border-radius: 3px;
+	display: block;
+	margin-bottom: 24px;
+	
+	-webkit-box-shadow: 0px 2px 3px 0px #c3c3c3;
+    -moz-box-shadow: 0px 2px 3px 0px #c3c3c3;
+    box-shadow: 0px 2px 3px 0px #c3c3c3;
+}
