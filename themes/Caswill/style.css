@@ -83,6 +83,14 @@ ul#information {
 	font-size: 24px;
 }
 
+.article h2 a {
+	color: #303030;
+}
+
+.article h2 a:hover {
+	color: #d14444;
+}
+
 .article .date {
 	color: #606060;	
 	font-style: italic;
