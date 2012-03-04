@@ -19,10 +19,10 @@ body {
 a {
 	color: #d14444;
 	text-decoration: none;
-	-webkit-transition:all 0.2s ease-in;  
-   -moz-transition:all 0.2s ease-in;  
-   -o-transition:all 0.2s ease-in;  
-   transition:all 0.2s ease-in;
+	-webkit-transition:background-color 0.2s ease-in, color 0.2s ease-in;  
+   -moz-transition:background-color 0.2s ease-in, color 0.2s ease-in;  
+   -o-transition:background-color 0.2s ease-in, color 0.2s ease-in;  
+   transition:background-color 0.2s ease-in, color 0.2s ease-in;
 }
 
 #wrapper {
