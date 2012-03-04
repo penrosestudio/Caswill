@@ -9,6 +9,9 @@ if ( function_exists( 'register_nav_menu' ) ) {
 	register_nav_menu( 'information_menu', 'Information Menu' );
 }
 
+wp_enqueue_script( 'jquery' );
+wp_register_script('app', get_bloginfo('stylesheet_directory').'/js/app.js');
+wp_enqueue_script('app');
 
 function load_cat_parent_template()
 {

@@ -6,12 +6,15 @@
 	query_posts('post_type=video');
 	if(have_posts()) : ?>
 	<div id="videoPlayer">
+		<div id="playerBox"></div>
 		<?php while(have_posts()) : the_post(); ?>
-		<?php //echo apply_filters('the_content', $wp_query->posts[0]->post_content); ?>
+		<pre class="hidden">
+			<?php echo htmlentities(apply_filters('the_content', $wp_query->posts[0]->post_content)); ?>
+		</pre>
 		<?php $content = get_the_content();
 			$title = get_the_title(); ?>
 		<?php $thumbnail_url = get_thumbnail_url_from_video_url(get_url_from_content($content), 'large'); ?>
-			<img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $title; ?>" />
+		<img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $title; ?>" />
 		<?php ?>
 		<?php endwhile; ?>
 	</div>
