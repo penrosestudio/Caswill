@@ -16,6 +16,10 @@ body {
 	font-weight: 400;
 }
 
+html, body {
+	height: auto;
+}
+
 a {
 	color: #d14444;
 	text-decoration: none;
@@ -28,7 +32,17 @@ a {
 #wrapper {
 	margin-top: 120px;
 	height: auto;
-	min-height: auto;
+	min-height: 0px;
+}
+
+#graphic {
+	background-image: url("images/apple.jpg");
+    background-repeat: no-repeat;
+    height: 60px;
+    left: -80px;
+    position: absolute;
+    top: -11px;
+    width: 100px;
 }
 
 h1 {
@@ -83,7 +97,7 @@ ul#information {
 	width: 66%;
 }
 
-.article h2 {
+h2 {
 	display: inline-block;
 	font-size: 24px;
 }
