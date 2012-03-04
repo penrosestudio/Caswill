@@ -51,6 +51,7 @@ add_filter( 'wp_nav_menu_items', 'addHomeMenuLink', 10, 2 );
 
 // JB What are these numbers for?
 
+/* example creation of a custom post type
 // ************************************ create post type: Email Management
 
 if ( ! function_exists( 'post_type_emails' ) ) :
@@ -234,7 +235,7 @@ function sp_select ( $args ) {
 }
 endif;
 
-/* When the post is saved, saves our custom data */
+// When the post is saved, saves our custom data
 if ( ! function_exists( 'sp_save_postdata' ) ) :
 function sp_save_postdata($post_id, $post) {
 	global $sp_boxes;
@@ -309,7 +310,7 @@ endif;
 // Save the custom fields
 add_action( 'save_post', 'sp_save_postdata', 1, 2 );
 
-
+/* END example creation of a custom post type */
 
 
 ?>
