@@ -12,7 +12,8 @@
 			$title = get_the_title($post->ID);
 			$post_url = get_url_from_content($content);
 			if(isset($post_url)) {
-				$thumbnail_url = get_thumbnail_url_from_video_url($matches[0]);
+				$thumbnail_url = get_thumbnail_url_from_video_url($post_url);
+				
 			}
 		?>
 		<li>
