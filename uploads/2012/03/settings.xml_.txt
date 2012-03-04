@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<types>
+    <groups>
+        <group>
+            <ID>5</ID>
+            <post_title>Video meta</post_title>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_fields>,video-details,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,video,</_wp_types_group_post_types>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+            </meta>
+        </group>
+    </groups>
+    <fields>
+        <field>
+            <id>video-details</id>
+            <slug>video-details</slug>
+            <type>textarea</type>
+            <name>Video details</name>
+            <description>The video details e.g. \&quot;s16mm, 7min, colour, 1.85, stock: Fuji Press\&quot;</description>
+            <data>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>This Field is required</message>
+                    </required>
+                </validate>
+                <is_new>1</is_new>
+            </data>
+        </field>
+    </fields>
+    <types>
+        <type>
+            <labels>
+                <name>Videos</name>
+                <singular_name>Video</singular_name>
+                <add_new>Add New</add_new>
+                <add_new_item>Add New %s</add_new_item>
+                <edit_item>Edit %s</edit_item>
+                <new_item>New %s</new_item>
+                <view_item>View %s</view_item>
+                <search_items>Search %s</search_items>
+                <not_found>No %s found</not_found>
+                <not_found_in_trash>No %s found in Trash</not_found_in_trash>
+                <parent_item_colon>Parent %s</parent_item_colon>
+                <all_items>%s</all_items>
+            </labels>
+            <slug>video</slug>
+            <public>public</public>
+            <taxonomies>
+                <category>1</category>
+            </taxonomies>
+            <supports>
+                <title>1</title>
+                <editor>1</editor>
+            </supports>
+            <rewrite>
+                <enabled>1</enabled>
+                <custom>normal</custom>
+                <with_front>1</with_front>
+                <feeds>1</feeds>
+                <pages>1</pages>
+            </rewrite>
+            <has_archive>1</has_archive>
+            <show_in_menu>1</show_in_menu>
+            <show_ui>1</show_ui>
+            <publicly_queryable>1</publicly_queryable>
+            <can_export>1</can_export>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <query_var_enabled>1</query_var_enabled>
+            <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <id>video</id>
+        </type>
+    </types>
+</types>
