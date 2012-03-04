@@ -105,6 +105,22 @@ ul#information {
 
 #videoPlayer {
 	margin-right: 10px;
+	overflow: hidden;
+	padding: 0;
+}
+
+#videoPlayer ul {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 5000px; /* needs to be long enough to contain all images */
+	list-style-type: none;
+	margin: 0; 
+	padding: 0;
+}
+
+#videoPlayer ul li {
+	float: left;
 }
 
 #playerControl a, ul#filmIndex li a {
