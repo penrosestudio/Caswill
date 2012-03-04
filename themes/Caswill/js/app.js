@@ -5,12 +5,14 @@ $(document).ready(function() {
 		e.preventDefault();
 		var i = $(this).index();
 		
-		
-		$('#videoPlayer .thumbnails ul').fadeOut(function() {
-			$(this).css('left',-620*i+'px');
-			$(this).fadeIn();
-		});
-		
+		$('#videoPlayer .thumbnails ul').each(function() {
+			var $activeLi = $(this).children('li').eq(i),
+				left = $activeLi.position().left;
+			$(this).fadeOut(function() {	
+				$(this).css('left',-left+'px');
+				$(this).fadeIn();
+			});
+		});	
 	});
 	
 	$('#videoPlayer img').live('click', function() {
