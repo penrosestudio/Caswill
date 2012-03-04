@@ -4,7 +4,7 @@
 	<h2>Film Index</h2>
 	<?php global $wp_query;
 	$cat = $wp_query->query_vars['category_name'];
-	$query = query_posts('category_name='.$cat.'&post_type=video');
+	$query = query_posts('category_name='.$cat.'&post_type=video&order=menu_order');
 	if(have_posts()) : ?>
 	<ul id="filmIndex">
 		<?php while (have_posts()) : the_post();
