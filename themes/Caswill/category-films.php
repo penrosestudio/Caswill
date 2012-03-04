@@ -10,9 +10,8 @@
 		<?php while (have_posts()) : the_post();
 			$content = get_the_content($post->ID);
 			$title = get_the_title($post->ID);
-			$matches = array();
-			$post_url = preg_match('|^\s*(https?://[^\s"]+)\s*$|im', $content, $matches);
-			if(!empty($matches)) {
+			$post_url = get_url_from_content($content);
+			if(isset($post_url)) {
 				$thumbnail_url = get_thumbnail_url_from_video_url($matches[0]);
 			}
 		?>

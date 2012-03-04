@@ -33,20 +33,34 @@ function load_cat_parent_template()
     }
 }
 
-function get_thumbnail_url_from_video_url($url='') {
+function get_url_from_content($content='') {
+	$matches = array();
+	$post_url = preg_match('|^\s*(https?://[^\s"]+)\s*$|im', $content, $matches);
+	if(!empty($matches)) {
+		return $matches[0];
+	}
+}
+
+function get_thumbnail_url_from_video_url($url='', $size='small') {
 	$content = '';
 	if ( preg_match("/youtube\.com\/watch/i", $url) ) {
 		list($domain, $video_id) = split("v=", $url);
 		$video_id = esc_attr($video_id);
-		return "http://img.youtube.com/vi/$video_id/default.jpg";
-
+		if($size=='large') {
+			return "http://img.youtube.com/vi/$video_id/hqdefault.jpg";
+		} else {
+			return "http://img.youtube.com/vi/$video_id/default.jpg";
+		}
 	} elseif ( preg_match("/vimeo\.com\/[0-9]+/i", $url) ) {
 		list($domain, $video_id) = split(".com/", $url);
 		$video_id = esc_attr($video_id);
 
 		$hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$video_id.php"));
-
-		return $hash[0]['thumbnail_medium'];
+		if($size=='large') {
+			return $hash[0]['thumbnail_large'];
+		} else {
+			return $hash[0]['thumbnail_medium'];
+		}
 
 	}
 }
