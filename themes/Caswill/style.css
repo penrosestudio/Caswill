@@ -79,6 +79,7 @@ ul#information {
 
 .article h2 {
 	display: inline-block;
+	font-size: 24px;
 }
 
 .article .date {
