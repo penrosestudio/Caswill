@@ -137,6 +137,13 @@ h2 {
 	float: left;
 }
 
+.js #videoPlayer ul li {
+	display: none;
+}
+.js #videoPlayer ul li.first {
+	display: block;
+}
+
 #playerControl a, ul#filmIndex li a {
 	color: #303030;
 	width: 174px;

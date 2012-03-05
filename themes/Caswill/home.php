@@ -5,7 +5,7 @@
 	<?php global $wp_query;
 	global $post;
 	$videos = array();
-	query_posts('post_type=video');
+	query_posts('post_type=video&order=ASC'); // 'category_name='.$cat.'&post_type=video&orderby=menu_order&order=ASC'
 	if(have_posts()) : ?>
 	<div id="videoPlayer">
 		<?php $i=0; ?>
@@ -16,12 +16,12 @@
 				<?php $content = get_the_content();
 					$title = get_the_title(); ?>
 				<?php $thumbnail_url = get_thumbnail_url_from_video_url(get_url_from_content($content), 'large'); ?>
-				<?php if($i==0) : $imgClass = "first"; else: $imgClass=""; endif; ?>
-				<li>
+				<?php if($i==0) : $liClass = "first"; else: $liClass=""; endif; ?>
+				<li class="<?php echo $liClass; ?>">
 					<pre class="hidden">
 						<?php echo htmlentities(apply_filters('the_content', $content)); ?>
 					</pre>
-					<img src="<?php echo $thumbnail_url; ?>" class="<?php echo $imgClass; ?>" alt="<?php echo $title; ?>" />
+					<img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $title; ?>" />
 				</li>
 				<?php $i++;
 				$videos[] = $post; ?>

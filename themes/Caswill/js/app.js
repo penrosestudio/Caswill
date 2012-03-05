@@ -15,6 +15,10 @@ $(document).ready(function() {
 		});	
 	});
 	
+	$('#videoPlayer').each(function() {
+		$(this).find('.thumbnails ul li').width($(this).width()).show();
+	});
+	
 	$('#videoPlayer img').live('click', function() {
 		var t = $(this).prev('pre.hidden').text();
 		$('#videoPlayer .thumbnails ul').fadeOut(function() {
