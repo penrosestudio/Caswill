@@ -3,6 +3,8 @@
 <div id="content" class="grid8col right">
 
 	<?php global $wp_query;
+	global $post;
+	$videos = array();
 	query_posts('post_type=video');
 	if(have_posts()) : ?>
 	<div id="videoPlayer">
@@ -21,23 +23,23 @@
 					</pre>
 					<img src="<?php echo $thumbnail_url; ?>" class="<?php echo $imgClass; ?>" alt="<?php echo $title; ?>" />
 				</li>
-				<?php $i++; ?>
+				<?php $i++;
+				$videos[] = $post; ?>
 			<?php endwhile; ?>
 			</ul>
 		</div>
 	</div>
-	<?php endif;
-	wp_reset_query(); ?>
-	<?php if(have_posts()) : ?>
+	<?php endif; ?>
+	<?php if(!empty($videos)): ?>
 	<div id="playerControl">
 		<?php $i=0;
-		while(have_posts()) : the_post(); ?>
+		foreach($videos as $post) : ?>
 		<?php if($i==0) : $aClass="active"; else : $aClass=""; endif; ?>
 		<a href="<?php the_permalink(); ?>" class="<?php echo $aClass; ?>"><?php the_title(); ?>
 			<span class="details"><?php echo(types_render_field("video-details")); ?></span>
 		</a>
 		<?php $i++;
-		endwhile; ?>
+		endforeach; ?>
 	</div>
 	<?php endif; ?>
 </div>
