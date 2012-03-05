@@ -121,6 +121,7 @@ h2 {
 	margin-right: 10px;
 	overflow: hidden;
 	padding: 0;
+	height: 370px;
 }
 
 #videoPlayer ul {
@@ -135,6 +136,7 @@ h2 {
 
 #videoPlayer ul li {
 	float: left;
+	list-style-type: none;
 }
 
 .js #videoPlayer ul li {
