@@ -44,6 +44,16 @@ function get_url_from_content($content='') {
 	}
 }
 
+function curl_get($url) {
+	$curl = curl_init($url);
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($curl, CURLOPT_TIMEOUT, 30);
+	curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
+	$return = curl_exec($curl);
+	curl_close($curl);
+	return $return;
+}
+
 function get_thumbnail_url_from_video_url($url='', $size='small') {
 	$content = '';
 	if ( preg_match("/youtube\.com\/watch/i", $url) ) {
@@ -58,7 +68,8 @@ function get_thumbnail_url_from_video_url($url='', $size='small') {
 		list($domain, $video_id) = split(".com/", $url);
 		$video_id = esc_attr($video_id);
 
-		$hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$video_id.php"));
+		$hash = unserialize(curl_get("http://vimeo.com/api/v2/video/$video_id.php"));
+
 		if($size=='large') {
 			return $hash[0]['thumbnail_large'];
 		} else {
