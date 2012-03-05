@@ -169,6 +169,15 @@ h2 {
 	padding-right: 10px;
 }
 
+#videoPlayer span.details {
+	color: #606060;	
+	font-style: italic;
+	letter-spacing: 0.03em;
+	width: 350px;
+	display: block;
+	margin: -10px 0px 20px;
+}
+
 ul#filmIndex li a img {
 	width: 194px;
 	height: 120px;
