@@ -117,7 +117,7 @@ h2 {
 	letter-spacing: 0.03em;
 }
 
-#videoPlayer {
+#videoPlayer, #carouselPlayer {
 	margin-right: 10px;
 	overflow: hidden;
 	padding: 0;
@@ -127,7 +127,7 @@ h2 {
 	height: 370px;
 }
 
-#videoPlayer ul {
+#videoPlayer ul, #carouselPlayer ul {
 	position: relative;
 	left: 0;
 	top: 0;
@@ -137,7 +137,7 @@ h2 {
 	padding: 0;
 }
 
-#videoPlayer ul li {
+#videoPlayer ul li, #carouselPlayer ul li {
 	float: left;
 	list-style-type: none;
 }
