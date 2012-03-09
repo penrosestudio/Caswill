@@ -5,7 +5,7 @@
 	<?php global $wp_query;
 	global $post;
 	$videos = array();
-	query_posts('post_type=video&order=ASC'); // 'category_name='.$cat.'&post_type=video&orderby=menu_order&order=ASC'
+	query_posts('post_type=video&order=ASC&category_name=Featured'); 
 	if(have_posts()) : ?>
 	<div id="carouselPlayer">
 		<?php $i=0; ?>
