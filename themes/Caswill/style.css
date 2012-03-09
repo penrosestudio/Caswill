@@ -187,7 +187,7 @@ ul#filmIndex li a img {
 }
 
 ul#filmIndex li {
-	display: inline-block;
+	float: left;
 }
 
 ul#filmIndex li a {
