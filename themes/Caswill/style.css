@@ -142,10 +142,10 @@ h2 {
 	list-style-type: none;
 }
 
-.js #videoPlayer ul li {
+.js #carouselPlayer ul li {
 	display: none;
 }
-.js #videoPlayer ul li.first {
+.js #carouselPlayer ul li.first {
 	display: block;
 }
 
