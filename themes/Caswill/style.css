@@ -153,6 +153,7 @@ h2 {
 	color: #303030;
 	width: 174px;
 	display: inline-block;
+	vertical-align: top;
 	font-style: italic;
 	font-size: 22px;
 	margin: 10px 10px 20px 0px;
