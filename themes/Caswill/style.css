@@ -149,6 +149,7 @@ h2 {
 #carouselPlayer ul li img {
 	margin:auto;
 	width: 100%;
+	margin-top: -42px;
 }
 
 .js #carouselPlayer ul li {
