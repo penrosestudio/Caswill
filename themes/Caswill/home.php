@@ -7,7 +7,7 @@
 	$videos = array();
 	query_posts('post_type=video&order=ASC'); // 'category_name='.$cat.'&post_type=video&orderby=menu_order&order=ASC'
 	if(have_posts()) : ?>
-	<div id="videoPlayer">
+	<div id="carouselPlayer">
 		<?php $i=0; ?>
 		<div id="playerBox"></div>
 		<div class="thumbnails">
