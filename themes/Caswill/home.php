@@ -36,7 +36,15 @@
 		foreach($videos as $post) : ?>
 		<?php if($i==0) : $aClass="active"; else : $aClass=""; endif; ?>
 		<a href="<?php the_permalink(); ?>" class="<?php echo $aClass; ?>"><?php the_title(); ?>
-			<span class="details"><?php echo(types_render_field("video-details")); ?></span>
+			<!-- <span class="details"><?php echo(types_render_field("video-details")); ?></span> -->
+			<span class="details"><?php 
+			$parentcat = get_category_id('Films');
+			foreach((get_the_category()) as $childcat) {
+				if (cat_is_ancestor_of($parentcat, $childcat)) {
+					echo $childcat->cat_name;
+			}} ?></span>
+			
+			
 		</a>
 		<?php $i++;
 		endforeach; ?>
