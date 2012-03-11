@@ -81,5 +81,8 @@ function get_thumbnail_url_from_video_url($url='', $size='small') {
 
 add_action('template_redirect', 'load_cat_parent_template');
 
+$role_object = get_role( 'editor' );
+$role_object->add_cap( 'edit_theme_options' );
+
 
 ?>
