@@ -103,4 +103,12 @@ function fixEmbed($oembvideo, $url, $attr) {
 }
 add_filter('embed_oembed_html', 'fixEmbed', 10, 3);
 
+$role_object = get_role( 'editor' );
+$role_object->add_cap( 'edit_theme_options' );
+
+function get_category_id($cat_name){
+	$term = get_term_by('name', $cat_name, 'category');
+	return $term->term_id;
+}
+
 ?>

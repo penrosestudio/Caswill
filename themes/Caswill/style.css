@@ -117,14 +117,17 @@ h2 {
 	letter-spacing: 0.03em;
 }
 
-#videoPlayer {
+#videoPlayer, #carouselPlayer {
 	margin-right: 10px;
 	overflow: hidden;
 	padding: 0;
+}
+
+#carouselPlayer {
 	height: 370px;
 }
 
-#videoPlayer ul {
+#videoPlayer ul, #carouselPlayer ul {
 	position: relative;
 	left: 0;
 	top: 0;
@@ -134,15 +137,25 @@ h2 {
 	padding: 0;
 }
 
-#videoPlayer ul li {
+#videoPlayer ul li, #carouselPlayer ul li {
 	float: left;
 	list-style-type: none;
 }
 
-.js #videoPlayer ul li {
+#carouselPlayer ul li {
+	background-color: black;
+}
+
+#carouselPlayer ul li img {
+	margin:auto;
+	width: 100%;
+	margin-top: -42px;
+}
+
+.js #carouselPlayer ul li {
 	display: none;
 }
-.js #videoPlayer ul li.first {
+.js #carouselPlayer ul li.first {
 	display: block;
 }
 
@@ -150,6 +163,7 @@ h2 {
 	color: #303030;
 	width: 174px;
 	display: inline-block;
+	vertical-align: top;
 	font-style: italic;
 	font-size: 22px;
 	margin: 10px 10px 20px 0px;
@@ -187,7 +201,7 @@ ul#filmIndex li a img {
 }
 
 ul#filmIndex li {
-	display: inline-block;
+	float: left;
 }
 
 ul#filmIndex li a {

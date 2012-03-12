@@ -7,7 +7,8 @@
 	<h2><?php single_cat_title(); ?></h2>
 	<?php if(have_posts()) : ?>
 	<ul id="filmIndex">
-		<?php while (have_posts()) : the_post();
+		<?php $count = 0;
+			while (have_posts()) : the_post();
 			$content = get_the_content($post->ID);
 			$title = get_the_title($post->ID);
 			$post_url = get_url_from_content($content);
@@ -23,6 +24,12 @@
 				<span class="details"><?php echo(types_render_field("video-details")); ?></span>
 			</a>
 		</li>
+		<?php 
+			$count++;
+			if ($count % 3 == 0) {
+			echo "<br class='clearboth' />";
+			}
+		?>
 		<?php endwhile; ?>
 	</ul>
 	<?php endif; ?>
