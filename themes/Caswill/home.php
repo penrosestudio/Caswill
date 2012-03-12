@@ -15,13 +15,12 @@
 			<?php while(have_posts()) : the_post(); ?>
 				<?php $content = get_the_content();
 					$title = get_the_title(); ?>
-				<?php $thumbnail_url = get_thumbnail_url_from_video_url(get_url_from_content($content), 'large'); ?>
 				<?php if($i==0) : $liClass = "first"; else: $liClass=""; endif; ?>
 				<li class="<?php echo $liClass; ?>">
 					<pre class="hidden">
 						<?php echo htmlentities(apply_filters('the_content', $content)); ?>
 					</pre>
-					<img src="<?php echo $thumbnail_url; ?>" alt="<?php echo $title; ?>" />
+					<?php echo create_video_thumbnail(get_url_from_content($content)); ?>
 				</li>
 				<?php $i++;
 				$videos[] = $post; ?>

@@ -149,6 +149,8 @@ h2 {
 #carouselPlayer ul li img {
 	margin:auto;
 	width: 100%;
+}
+#carouselPlayer ul li img.youtube {
 	margin-top: -42px;
 }
 

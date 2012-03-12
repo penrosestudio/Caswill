@@ -9,9 +9,13 @@ if ( function_exists( 'register_nav_menu' ) ) {
 	register_nav_menu( 'information_menu', 'Information Menu' );
 }
 
-wp_enqueue_script( 'jquery' );
-wp_register_script('app', get_bloginfo('stylesheet_directory').'/js/app.js');
-wp_enqueue_script('app');
+function custom_scripts() {
+	wp_enqueue_script( 'jquery' );
+	wp_register_script('app', get_bloginfo('stylesheet_directory').'/js/app.js');
+	wp_enqueue_script('app');
+}
+
+add_action('wp_enqueue_scripts', 'custom_scripts');
 
 function load_cat_parent_template()
 {
@@ -56,9 +60,18 @@ function curl_get($url) {
 	return $return;
 }
 
+function get_video_source($url) {
+	if( preg_match("/youtube\.com\/watch/i", $url) ) {
+		return "youtube";
+	} elseif ( preg_match("/vimeo\.com\/[0-9]+/i", $url) ) {
+		return "vimeo";
+	}
+}
+
 function get_thumbnail_url_from_video_url($url='', $size='small') {
 	$content = '';
-	if ( preg_match("/youtube\.com\/watch/i", $url) ) {
+	$source = get_video_source($url);
+	if ( $source == "youtube" ) {
 		list($domain, $video_id) = split("v=", $url);
 		$video_id = esc_attr(trim($video_id));
 		if($size=='large') {
@@ -66,7 +79,7 @@ function get_thumbnail_url_from_video_url($url='', $size='small') {
 		} else {
 			return "http://img.youtube.com/vi/$video_id/default.jpg";
 		}
-	} elseif ( preg_match("/vimeo\.com\/[0-9]+/i", $url) ) {
+	} elseif ( $source=="vimeo" ) {
 		list($domain, $video_id) = split(".com/", $url);
 		$video_id = esc_attr(trim($video_id));
 		$result = curl_get("http://vimeo.com/api/v2/video/$video_id.php");
@@ -78,6 +91,19 @@ function get_thumbnail_url_from_video_url($url='', $size='small') {
 		}
 
 	}
+}
+
+function create_video_thumbnail($url) {
+	$thumbnail_url = get_thumbnail_url_from_video_url($url, 'large');
+	$source = get_video_source($url);
+	if($source=="youtube") {
+		$imgClass = "youtube";
+	} else {
+		$imgClass = "";
+	}
+?>
+	<img src="<?php echo $thumbnail_url; ?>" class="<?php echo $imgClass; ?>" alt="<?php the_title(); ?>" />
+<?php
 }
 
 function fixEmbed($oembvideo, $url, $attr) {
