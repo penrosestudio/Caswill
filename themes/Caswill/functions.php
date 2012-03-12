@@ -36,6 +36,8 @@ function load_cat_parent_template()
     }
 }
 
+add_action('template_redirect', 'load_cat_parent_template');
+
 function get_url_from_content($content='') {
 	$matches = array();
 	$post_url = preg_match('|^\s*(https?://[^\s"]+)\s*$|im', $content, $matches);
@@ -78,7 +80,27 @@ function get_thumbnail_url_from_video_url($url='', $size='small') {
 	}
 }
 
-add_action('template_redirect', 'load_cat_parent_template');
-
+function fixEmbed($oembvideo, $url, $attr) {
+  if(strpos($url,'vimeo.com')!== false) {
+    // check if url is for Vimeo video
+    $width = 0;
+    $height = 0;
+    $newheight = 0;
+    $attrstart = strpos($oembvideo,'width="');
+    if($attrstart !== false) {
+      $attrstart += 7;
+      $width = substr($oembvideo, $attrstart, strpos($oembvideo,'"',$attrstart+1)-$attrstart);
+      $attrstart = strpos($oembvideo,'height="');
+      if(($attrstart !== false) && $width>0) {
+ 	$attrstart += 8;
+        $height = substr($oembvideo, $attrstart, strpos($oembvideo,'"',$attrstart+1)-$attrstart);
+        $newheight = round($height*$attr['width']/$width);
+        $oembvideo = str_replace('height="'.$height,'height="'.$newheight, str_replace('width="'.$width,'width="'.$attr['width'], $oembvideo));
+      }
+    }
+  }
+  return $oembvideo;
+}
+add_filter('embed_oembed_html', 'fixEmbed', 10, 3);
 
 ?>
