@@ -36,13 +36,13 @@ a {
 }
 
 #graphic {
-	background-image: url("images/apple.jpg");
+	background-image: url("images/apple-watercolour.jpg");
     background-repeat: no-repeat;
-    height: 60px;
-    left: -80px;
+    height: 93px;
+    left: -120px;
     position: absolute;
-    top: -11px;
-    width: 100px;
+    top: -26px;
+    width: 90px;
 }
 
 h1 {
