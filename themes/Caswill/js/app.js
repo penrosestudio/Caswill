@@ -14,7 +14,6 @@ var $ = jQuery,
 					$('#carouselPlayer .thumbnails ul').each(function() {
 						var $activeLi = $(this).children('li').eq(i);
 							//left = $activeLi.position().left;
-						console.log($activeLi,-i*$activeLi.width());
 						$a.addClass('active').siblings('a').removeClass('active');
 						$(this).fadeOut(function() {	
 							$(this).css('left',-i*$activeLi.width()+'px');
