@@ -36,6 +36,17 @@ a {
 }
 
 #graphic {
+	background-image: url("images/logo.gif");
+    background-repeat: no-repeat;
+    height: 267px;
+    left: -196px;
+    position: absolute;
+    top: -33px;
+    width: 196px;
+}
+
+/* Apple graphic
+#graphic {
 	background-image: url("images/apple-watercolour.jpg");
     background-repeat: no-repeat;
     height: 93px;
@@ -44,6 +55,7 @@ a {
     top: -33px;
     width: 90px;
 }
+*/
 
 h1 {
 	text-transform: uppercase;
