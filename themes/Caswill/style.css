@@ -36,12 +36,12 @@ a {
 }
 
 #graphic {
-	background-image: url("images/logo.gif");
+	background-image: url("images/logo.png");
     background-repeat: no-repeat;
     height: 267px;
-    left: -196px;
+    left: -216px;
     position: absolute;
-    top: -33px;
+    top: 6px;
     width: 196px;
 }
 
