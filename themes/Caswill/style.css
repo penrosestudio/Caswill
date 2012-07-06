@@ -156,6 +156,7 @@ h2 {
 
 #carouselPlayer ul li {
 	background-color: black;
+	cursor: pointer;
 }
 
 #carouselPlayer ul li img {
@@ -185,7 +186,7 @@ h2 {
 }
 
 #playerControl a:hover, #playerControl a.active {
-	background-color: #949494;
+	background-color: #d0d0d0;
 }
 
 #playerControl a span, ul#filmIndex li a span {
