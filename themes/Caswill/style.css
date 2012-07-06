@@ -9,7 +9,7 @@ Version: 0.1
 
 body {
 	background-color: #f5f5f5;
-	background-image: url(images/paper-texture.jpg);
+	background-image: url(images/paper-texture-light.jpg);
 	color: #303030;
 	font-family: "adobe-caslon-pro",serif;
 	font-style: normal;
@@ -36,10 +36,10 @@ a {
 }
 
 #graphic {
-	background-image: url("images/logo.png");
+	background-image: url("images/logo.gif");
     background-repeat: no-repeat;
     height: 267px;
-    left: -216px;
+    left: -156px;
     position: absolute;
     top: 6px;
     width: 196px;
