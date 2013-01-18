@@ -42,11 +42,14 @@ html, body {
 
 .jbasewrap {
 	padding-top: 90px;
-	overflow: hidden;
 }
 
 .footer, .push {
 	height: 92px;
+}
+
+.clearboth {
+	clear: both;
 }
 
 .footer {

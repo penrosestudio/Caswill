@@ -1,4 +1,5 @@
 			</div>
+			<br class="clearboth" />
 			<div class="push"></div>
         </div>
         <div class="footer"></div>
