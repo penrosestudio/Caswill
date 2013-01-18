@@ -42,6 +42,7 @@ html, body {
 
 .jbasewrap {
 	padding-top: 90px;
+	overflow: hidden;
 }
 
 .footer, .push {
