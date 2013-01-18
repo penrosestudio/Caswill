@@ -269,7 +269,18 @@ h2 {
 	display: block;
 }
 
-#playerControl a, ul#filmIndex li a {
+ul#filmIndex li a {
+	font-family: radioregular;
+	margin: 10px 10px 20px 0px;
+	padding: 10px;
+	display: inline-block;
+ 	vertical-align: top;
+	font-size: 22px;
+ 	width: 174px;
+ 	color: #6d6555;
+}
+
+#playerControl a {
 	width: 174px;
 	height: 100px;
 	display: inline-block;
