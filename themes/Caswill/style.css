@@ -53,7 +53,7 @@ html, body {
 }
 
 .footer {
-	background-image: url(images/footer.png);
+	/*background-image: url(images/footer.png);*/
 	height: 92px;
 }
 
@@ -103,17 +103,18 @@ a {
 }
 */
 
-h1 {
-	font-family: radioregular;
-	font-size: 30px;
+h1 a {
+	width: 202px;
+	height: 59px;
+	text-indent: -9999px;
+	overflow: hidden;
+	background-image: url(images/logo.gif);
+	background-repeat: no-repeat;
+	display: block;
 }
 
 h1 small {
-	font-family: aw-conqueror-inline;
-	font-size: 37px;
-	text-transform: capitalize;
-	display: block;
-	margin-top: 0px;
+	text-indent: -9999px;
 }
 
 .hidden {
@@ -201,6 +202,7 @@ ul#information {
 	position: relative;
 	margin-bottom: 60px;
 	font-family: "Hoefler Text", Georgia, Times, serif;
+	text-align: justify;
 }
 
 .article p {
@@ -289,8 +291,7 @@ ul#filmIndex li a {
 	height: 100px;
 	display: inline-block;
 	vertical-align: top;
-	font-family: radioregular;
-	font-size: 23px;
+	font-size: 15px;
 	margin: 10px 10px 20px 0px;
 	padding: 15px 2px 0px 18px;
 	color: #6d6555;
@@ -314,7 +315,7 @@ ul#filmIndex li a {
 
 #playerControl a span, ul#filmIndex li a span {
 	font-size: 11px;
-	line-height: 18px;
+	line-height: 10px;
 	display: block;
 	letter-spacing: 0.1em;
 	margin-top: 3px;
