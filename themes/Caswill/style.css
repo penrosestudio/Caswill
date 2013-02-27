@@ -276,12 +276,13 @@ h2 {
 }
 
 ul#filmIndex li a {
-	font-family: radioregular;
+	font-family: aw-conqueror-carved-one;
 	margin: 10px 10px 20px 0px;
 	padding: 10px;
 	display: inline-block;
  	vertical-align: top;
-	font-size: 22px;
+	font-size: 15px;
+	letter-spacing: 0.1em;
  	width: 174px;
  	color: #6d6555;
 }
