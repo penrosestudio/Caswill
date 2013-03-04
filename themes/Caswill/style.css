@@ -256,7 +256,7 @@ h2 {
 }
 
 #carouselPlayer ul li {
-	background-color: black;
+	/* background-color: black; */
 	cursor: pointer;
 }
 
